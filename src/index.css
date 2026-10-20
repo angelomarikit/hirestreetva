@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #0b0b0d;
+  --color-charcoal: #171719;
+  --color-deep: #242326;
+  --color-rose: #b87970;
+  --color-copper: #c98e85;
+  --color-rose-soft: #e9b9b0;
+  --color-ivory: #f8f5f2;
+  --color-muted: #9a9691;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+
+  --text-display: clamp(3rem, 8vw, 8.75rem);
+  --text-section: clamp(2.25rem, 4.5vw, 4rem);
+  --text-service: clamp(1.75rem, 3vw, 3rem);
+
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-ink font-sans text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-rose/30 text-white;
+  }
+}
+
+@layer utilities {
+  .text-display {
+    font-size: var(--text-display);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+  }
+
+  .text-section {
+    font-size: var(--text-section);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .text-service {
+    font-size: var(--text-service);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .editorial-serif {
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+
+  .hairline {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--color-rose) 55%, transparent),
+      transparent
+    );
+  }
+}
