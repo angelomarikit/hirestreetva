@@ -1,6 +1,7 @@
 import { ArrowUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useSiteContent } from '../../context/SiteContentContext'
+import { phoneTelHref } from '../../lib/phone'
 import { Container } from '../ui/Container'
 
 const footerLinks = [
@@ -57,7 +58,11 @@ export function SiteFooter() {
                     Send an inquiry
                   </Link>
                 )}
-                {settings.phone && <p>{settings.phone}</p>}
+                {settings.phone && (
+                  <a href={phoneTelHref(settings.phone)} className="block hover:text-rose-soft">
+                    {settings.phone}
+                  </a>
+                )}
               </div>
             </div>
           </div>

@@ -4,6 +4,11 @@ export const defaultContentMap: Record<string, string> = {
   'home.about.title.line2': 'Are Never Built Alone.',
   'home.about.body':
     'Hire Street VA helps businesses access virtual support so leaders can focus on growth, relationships, and meaningful work — with a premium experience from inquiry to collaboration.',
+  'home.office.eyebrow': 'Our Office',
+  'home.office.title.line1': 'Where support meets',
+  'home.office.title.line2': 'professional presence.',
+  'home.office.body':
+    'Visit us at Alveo Park Triangle Tower in Bonifacio Global City — a space designed for focused work, client meetings, and the team behind Hire Street VA.',
   'about.intro.body':
     'Hire Street VA is a premium virtual assistance agency dedicated to helping business owners, entrepreneurs, and growing companies access reliable remote support — so leaders can stay focused on vision, relationships, and the work that moves the business forward.',
   'about.who.title': 'Who we are',

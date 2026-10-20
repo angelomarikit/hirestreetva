@@ -145,5 +145,9 @@ insert into public.content_entries (key, group_label, field_label, field_type, v
   ('careers.panel.line2', 'Contact & Hire Forms', 'Careers form — left panel line 2', 'text', 'About Joining Our Team', 43),
   ('cta.business.title1', 'Home Page', 'Business CTA — title line 1', 'text', 'You Lead the Vision.', 50),
   ('cta.business.title2', 'Home Page', 'Business CTA — title line 2', 'text', 'We''ll Help With the Rest.', 51),
-  ('cta.business.body', 'Home Page', 'Business CTA — description', 'textarea', 'Explore virtual assistance solutions designed to free up your time and support your business operations.', 52)
+  ('cta.business.body', 'Home Page', 'Business CTA — description', 'textarea', 'Explore virtual assistance solutions designed to free up your time and support your business operations.', 52),
+  ('home.office.eyebrow', 'Home Page', 'Office gallery — eyebrow', 'text', 'Our Office', 15),
+  ('home.office.title.line1', 'Home Page', 'Office gallery — title line 1', 'text', 'Where support meets', 16),
+  ('home.office.title.line2', 'Home Page', 'Office gallery — title line 2 (serif)', 'text', 'professional presence.', 17),
+  ('home.office.body', 'Home Page', 'Office gallery — description', 'textarea', 'Visit us at Alveo Park Triangle Tower in Bonifacio Global City — a space designed for focused work, client meetings, and the team behind Hire Street VA.', 18)
 on conflict (key) do nothing;

@@ -7,6 +7,7 @@ import { HeroSection } from '../components/sections/HeroSection'
 import { InteractiveServices } from '../components/sections/InteractiveServices'
 import { ProcessStudioSection } from '../components/sections/ProcessStudioSection'
 import { ServicesShowcaseGrid } from '../components/sections/ServicesShowcaseGrid'
+import { OfficeGallerySection } from '../components/sections/OfficeGallerySection'
 import { WhySection } from '../components/sections/WhySection'
 import { PageMeta } from '../components/seo/PageMeta'
 import { useSiteContent } from '../context/SiteContentContext'
@@ -42,6 +43,7 @@ export function HomePage() {
       <InteractiveServices services={services} />
       <AboutStudioSection />
       <AboutSection />
+      <OfficeGallerySection />
       <WhySection />
       <ProcessStudioSection />
       <BusinessCtaSection />

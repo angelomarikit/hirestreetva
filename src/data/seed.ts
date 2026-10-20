@@ -15,7 +15,7 @@ export const defaultSettings: SiteSettings = {
   secondary_cta_label: 'Explore Our Services',
   secondary_cta_href: '/services',
   contact_email: null,
-  phone: null,
+  phone: '0939-319-7761',
   whatsapp_url: null,
   messenger_url: null,
   instagram_url: null,
