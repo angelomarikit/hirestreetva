@@ -35,7 +35,7 @@ function setMetaName(name: string, content: string) {
 export function applyShareImageMeta(imagePathOrUrl: string | null | undefined) {
   const image = absoluteSiteUrl(imagePathOrUrl?.trim() || DEFAULT_OG_IMAGE_PATH)
   setMetaProperty('og:image', image)
-  setMetaProperty('og:image:alt', 'Hire Street VA — Premium Virtual Assistance Agency')
+  setMetaProperty('og:image:alt', 'Hire Street VA — Executive Business Support Services')
   setMetaName('twitter:card', 'summary_large_image')
   setMetaName('twitter:image', image)
 }

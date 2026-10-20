@@ -15,7 +15,7 @@ export function BrandLogo({
   const image = (
     <img
       src="/logo.png"
-      alt="Hire Street VA — Premium Virtual Assistance"
+      alt="Hire Street VA — Executive Business Support Services"
       className={`${heightClass} w-auto max-w-none object-contain object-left ${className}`}
       decoding="async"
       fetchPriority="high"

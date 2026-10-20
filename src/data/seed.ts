@@ -3,7 +3,7 @@ import type { Faq, JobOpening, Service, SiteSettings, Testimonial } from '../typ
 export const defaultSettings: SiteSettings = {
   site_name: 'Hire Street VA',
   tagline: 'Executive-Level Virtual Talent for Ambitious Businesses.',
-  hero_eyebrow: 'PREMIUM VIRTUAL ASSISTANCE AGENCY',
+  hero_eyebrow: 'EXECUTIVE BUSINESS SUPPORT SERVICES',
   hero_title_line1: 'Exceptional Support.',
   hero_title_line2: 'Limitless Possibilities.',
   hero_description:
@@ -23,7 +23,7 @@ export const defaultSettings: SiteSettings = {
   address_line1: '32nd street Corner 11th avenue',
   address_line2: 'Bonifacio Global City',
   address_line3: 'Alveo Park triangle Tower',
-  meta_title: 'Hire Street VA | Premium Virtual Assistance Agency',
+  meta_title: 'Hire Street VA | Executive Business Support Services',
   meta_description:
     'Hire Street VA connects ambitious businesses with executive-level virtual assistants for operations, support, and growth.',
   og_image_url: '/images/og-share.jpg',
