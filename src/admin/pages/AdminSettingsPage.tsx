@@ -110,8 +110,15 @@ export function AdminSettingsPage() {
         <AdminField label="Email">
           <input className={adminInputClass} value={settings.contact_email ?? ''} onChange={(e) => set('contact_email', e.target.value || null)} />
         </AdminField>
-        <AdminField label="Phone">
+        <AdminField label="Phone (primary)">
           <input className={adminInputClass} value={settings.phone ?? ''} onChange={(e) => set('phone', e.target.value || null)} />
+        </AdminField>
+        <AdminField label="Phone (secondary)">
+          <input
+            className={adminInputClass}
+            value={settings.phone_secondary ?? ''}
+            onChange={(e) => set('phone_secondary', e.target.value || null)}
+          />
         </AdminField>
         <AdminField label="Address line 1">
           <input className={adminInputClass} value={settings.address_line1 ?? ''} onChange={(e) => set('address_line1', e.target.value || null)} />

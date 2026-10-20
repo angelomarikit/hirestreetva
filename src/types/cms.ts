@@ -52,6 +52,7 @@ export type SiteSettings = {
   secondary_cta_href: string
   contact_email: string | null
   phone: string | null
+  phone_secondary: string | null
   whatsapp_url: string | null
   messenger_url: string | null
   instagram_url: string | null
