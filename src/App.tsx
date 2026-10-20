@@ -11,6 +11,7 @@ import { AdminOverviewPage } from './admin/pages/AdminOverviewPage'
 import { AdminServicesPage } from './admin/pages/AdminServicesPage'
 import { AdminSettingsPage } from './admin/pages/AdminSettingsPage'
 import { AdminTestimonialsPage } from './admin/pages/AdminTestimonialsPage'
+import { SiteShareMeta } from './components/seo/SiteShareMeta'
 import { SiteContentProvider } from './context/SiteContentContext'
 import { SiteFooter } from './components/layout/SiteFooter'
 import { SiteHeader } from './components/layout/SiteHeader'
@@ -24,6 +25,7 @@ import { ServicesPage } from './pages/ServicesPage'
 function PublicLayout() {
   return (
     <SiteContentProvider>
+      <SiteShareMeta />
       <SiteHeader />
       <Routes>
         <Route path="/" element={<HomePage />} />

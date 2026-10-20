@@ -26,7 +26,7 @@ export const defaultSettings: SiteSettings = {
   meta_title: 'Hire Street VA | Premium Virtual Assistance Agency',
   meta_description:
     'Hire Street VA connects ambitious businesses with executive-level virtual assistants for operations, support, and growth.',
-  og_image_url: '/logo.png',
+  og_image_url: '/images/og-share.jpg',
   image_home_about: '/images/home-brand-collage.jpg',
   image_about_page: '/images/about-executive.jpg',
   image_contact_panel: '/images/about-collaboration.jpg',

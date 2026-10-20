@@ -105,7 +105,7 @@ insert into public.site_settings (
   'Explore Our Services', '/services',
   'Hire Street VA | Premium Virtual Assistance Agency',
   'Hire Street VA connects ambitious businesses with executive-level virtual assistants for operations, support, and growth.',
-  '/logo.png',
+  '/images/og-share.jpg',
   '32nd street Corner 11th avenue',
   'Bonifacio Global City',
   'Alveo Park triangle Tower',
