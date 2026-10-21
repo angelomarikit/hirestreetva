@@ -106,9 +106,9 @@ insert into public.site_settings (
   'Hire Street VA | Executive Business Support Services',
   'Hire Street VA connects ambitious businesses with executive-level virtual assistants for operations, support, and growth.',
   '/images/og-share.jpg',
-  '32nd street Corner 11th avenue',
+  '26th Floor, Signature Alveo Park Triangle Tower',
+  '32nd Street Corner 11th Avenue',
   'Bonifacio Global City',
-  'Alveo Park triangle Tower',
   '/images/home-brand-collage.jpg',
   '/images/about-executive.jpg',
   '/images/about-collaboration.jpg',
@@ -149,5 +149,5 @@ insert into public.content_entries (key, group_label, field_label, field_type, v
   ('home.office.eyebrow', 'Home Page', 'Office gallery — eyebrow', 'text', 'Our Office', 15),
   ('home.office.title.line1', 'Home Page', 'Office gallery — title line 1', 'text', 'Where support meets', 16),
   ('home.office.title.line2', 'Home Page', 'Office gallery — title line 2 (serif)', 'text', 'professional presence.', 17),
-  ('home.office.body', 'Home Page', 'Office gallery — description', 'textarea', 'Visit us at Alveo Park Triangle Tower in Bonifacio Global City — a space designed for focused work, client meetings, and the team behind Hire Street VA.', 18)
+  ('home.office.body', 'Home Page', 'Office gallery — description', 'textarea', 'Visit us on the 26th floor at Signature Alveo Park Triangle Tower, Bonifacio Global City — a space designed for focused work, client meetings, and the team behind Hire Street VA.', 18)
 on conflict (key) do nothing;

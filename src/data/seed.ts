@@ -21,9 +21,9 @@ export const defaultSettings: SiteSettings = {
   messenger_url: null,
   instagram_url: null,
   linkedin_url: null,
-  address_line1: '32nd street Corner 11th avenue',
-  address_line2: 'Bonifacio Global City',
-  address_line3: 'Alveo Park triangle Tower',
+  address_line1: '26th Floor, Signature Alveo Park Triangle Tower',
+  address_line2: '32nd Street Corner 11th Avenue',
+  address_line3: 'Bonifacio Global City',
   meta_title: 'Hire Street VA | Executive Business Support Services',
   meta_description:
     'Hire Street VA connects ambitious businesses with executive-level virtual assistants for operations, support, and growth.',

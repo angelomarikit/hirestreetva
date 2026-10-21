@@ -47,7 +47,7 @@ export function OfficeGallerySection() {
           >
             {t(
               'home.office.body',
-              'Visit us at Alveo Park Triangle Tower in Bonifacio Global City — a space designed for focused work, client meetings, and the team behind Hire Street VA.',
+              'Visit us on the 26th floor at Signature Alveo Park Triangle Tower, Bonifacio Global City — a space designed for focused work, client meetings, and the team behind Hire Street VA.',
             )}
           </motion.p>
         </div>
