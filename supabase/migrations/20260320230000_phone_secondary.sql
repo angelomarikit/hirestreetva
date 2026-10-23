@@ -3,6 +3,6 @@ alter table public.site_settings
 
 update public.site_settings
 set
-  phone = '(0939) 319-7761',
-  phone_secondary = '(0949) 124 2491'
+  phone = '+639393197761',
+  phone_secondary = '+639491242491'
 where id = 1;
