@@ -3,22 +3,30 @@ import { isSupabaseConfigured, supabase } from './supabase'
 
 const BUCKET = 'website-media'
 
-export async function uploadWebsiteImage(
+function defaultContentType(file: File): string {
+  const ext = file.name.split('.').pop()?.toLowerCase() ?? ''
+  if (file.type) return file.type
+  if (ext === 'mp4') return 'video/mp4'
+  if (ext === 'webm') return 'video/webm'
+  if (ext === 'mov') return 'video/quicktime'
+  return `image/${ext || 'jpeg'}`
+}
+
+export async function uploadWebsiteFile(
   file: File,
   folder = 'general',
-): Promise<{ publicUrl: string; asset: MediaAsset | null }> {
+): Promise<{ publicUrl: string; storagePath: string; asset: MediaAsset | null }> {
   if (!isSupabaseConfigured || !supabase) {
     throw new Error('Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.')
   }
 
-  const ext = file.name.split('.').pop()?.toLowerCase() ?? 'jpg'
   const safeName = file.name.replace(/[^a-zA-Z0-9.-]/g, '-')
   const path = `${folder}/${Date.now()}-${safeName}`
 
   const { error: uploadError } = await supabase.storage.from(BUCKET).upload(path, file, {
     cacheControl: '3600',
     upsert: false,
-    contentType: file.type || `image/${ext}`,
+    contentType: defaultContentType(file),
   })
 
   if (uploadError) throw uploadError
@@ -39,7 +47,15 @@ export async function uploadWebsiteImage(
 
   if (dbError) throw dbError
 
-  return { publicUrl, asset: asset as MediaAsset }
+  return { publicUrl, storagePath: path, asset: asset as MediaAsset }
+}
+
+export async function uploadWebsiteImage(
+  file: File,
+  folder = 'general',
+): Promise<{ publicUrl: string; asset: MediaAsset | null }> {
+  const { publicUrl, asset } = await uploadWebsiteFile(file, folder)
+  return { publicUrl, asset }
 }
 
 export async function listMediaAssets(): Promise<MediaAsset[]> {

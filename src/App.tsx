@@ -7,6 +7,7 @@ import { AdminInquiriesPage } from './admin/pages/AdminInquiriesPage'
 import { AdminJobsPage } from './admin/pages/AdminJobsPage'
 import { AdminLoginPage } from './admin/pages/AdminLoginPage'
 import { AdminMediaPage } from './admin/pages/AdminMediaPage'
+import { AdminOfficeGalleryPage } from './admin/pages/AdminOfficeGalleryPage'
 import { AdminOverviewPage } from './admin/pages/AdminOverviewPage'
 import { AdminServicesPage } from './admin/pages/AdminServicesPage'
 import { AdminSettingsPage } from './admin/pages/AdminSettingsPage'
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="settings" element={<AdminSettingsPage />} />
             <Route path="content" element={<AdminContentPage />} />
             <Route path="media" element={<AdminMediaPage />} />
+            <Route path="office" element={<AdminOfficeGalleryPage />} />
             <Route path="services" element={<AdminServicesPage />} />
             <Route path="faqs" element={<AdminFaqsPage />} />
             <Route path="jobs" element={<AdminJobsPage />} />

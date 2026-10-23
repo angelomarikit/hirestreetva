@@ -1,44 +1,68 @@
-export type OfficeGalleryItem = {
-  src: string
-  alt: string
-  /** Tailwind grid placement on md+ */
-  gridClass: string
-}
+import type { OfficeGalleryItem } from '../types/cms'
 
-export const officeGalleryItems: OfficeGalleryItem[] = [
+/** Fallback when Supabase has no office gallery rows yet */
+export const defaultOfficeGalleryItems: Omit<OfficeGalleryItem, 'id' | 'created_at'>[] = [
   {
-    src: '/images/office/office-01.jpg',
-    alt: 'Hire Street VA office — reception lounge with warm wood and modern seating',
-    gridClass: 'md:col-span-2 md:row-span-2',
+    media_type: 'image',
+    public_url: '/images/office/office-01.jpg',
+    storage_path: null,
+    caption: 'Reception lounge with warm wood and modern seating',
+    grid_layout: 'large',
+    sort_order: 1,
+    is_published: true,
   },
   {
-    src: '/images/office/office-02.jpg',
-    alt: 'Collaborative workspace with curved arch and city views',
-    gridClass: 'md:col-span-1',
+    media_type: 'image',
+    public_url: '/images/office/office-02.jpg',
+    storage_path: null,
+    caption: 'Collaborative workspace with curved arch and city views',
+    grid_layout: 'standard',
+    sort_order: 2,
+    is_published: true,
   },
   {
-    src: '/images/office/office-03.jpg',
-    alt: 'Office pantry and bar area overlooking the skyline',
-    gridClass: 'md:col-span-1',
+    media_type: 'image',
+    public_url: '/images/office/office-03.jpg',
+    storage_path: null,
+    caption: 'Office pantry and bar area overlooking the skyline',
+    grid_layout: 'standard',
+    sort_order: 3,
+    is_published: true,
   },
   {
-    src: '/images/office/office-04.jpg',
-    alt: 'Executive meeting room with marble table',
-    gridClass: 'md:col-span-1',
+    media_type: 'image',
+    public_url: '/images/office/office-04.jpg',
+    storage_path: null,
+    caption: 'Executive meeting room with marble table',
+    grid_layout: 'standard',
+    sort_order: 4,
+    is_published: true,
   },
   {
-    src: '/images/office/office-05.jpg',
-    alt: 'Premium reception desk and welcome area',
-    gridClass: 'md:col-span-1',
+    media_type: 'image',
+    public_url: '/images/office/office-05.jpg',
+    storage_path: null,
+    caption: 'Premium reception desk and welcome area',
+    grid_layout: 'standard',
+    sort_order: 5,
+    is_published: true,
   },
   {
-    src: '/images/office/office-06.jpg',
-    alt: 'Lounge with arched shelving and presentation screen',
-    gridClass: 'md:col-span-1',
+    media_type: 'image',
+    public_url: '/images/office/office-06.jpg',
+    storage_path: null,
+    caption: 'Lounge with arched shelving and presentation screen',
+    grid_layout: 'standard',
+    sort_order: 6,
+    is_published: true,
   },
   {
-    src: '/images/office/office-07.jpg',
-    alt: 'Alveo Park Triangle Tower — Bonifacio Global City',
-    gridClass: 'md:col-span-3',
+    media_type: 'image',
+    public_url: '/images/office/office-07.jpg',
+    storage_path: null,
+    caption: 'Signature Alveo Park Triangle Tower — Bonifacio Global City',
+    grid_layout: 'wide',
+    sort_order: 7,
+    is_published: true,
   },
 ]

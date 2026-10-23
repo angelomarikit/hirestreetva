@@ -1,5 +1,6 @@
 import {
   Briefcase,
+  Building2,
   FileText,
   HelpCircle,
   ImageIcon,
@@ -15,6 +16,7 @@ const cards = [
   { title: 'Website settings', description: 'Hero, photos, contact, address, SEO', to: '/admin/settings', icon: Settings },
   { title: 'Page content', description: 'Headlines and paragraphs', to: '/admin/content', icon: FileText },
   { title: 'Media library', description: 'All uploaded images', to: '/admin/media', icon: ImageIcon },
+  { title: 'Office gallery', description: 'Office photos, videos, featured clip', to: '/admin/office', icon: Building2 },
   { title: 'Services', description: 'Homepage service list', to: '/admin/services', icon: Sparkles },
   { title: 'FAQ', description: 'Questions & answers', to: '/admin/faqs', icon: HelpCircle },
   { title: 'Careers', description: 'Job openings', to: '/admin/jobs', icon: Briefcase },

@@ -6,11 +6,13 @@ import {
   defaultSettings,
   defaultTestimonials,
 } from '../data/seed'
+import { defaultOfficeGalleryItems } from '../data/officeGallery'
 import type {
   ContentEntry,
   Faq,
   JobOpening,
   MediaAsset,
+  OfficeGalleryItem,
   Service,
   SiteSettings,
   Testimonial,
@@ -220,6 +222,70 @@ export async function deleteJob(id: string): Promise<void> {
   if (!isSupabaseConfigured || !supabase) throw new Error('Supabase not configured')
   const { error } = await supabase.from('job_openings').delete().eq('id', id)
   if (error) throw error
+}
+
+function fallbackOfficeGallery(): OfficeGalleryItem[] {
+  return defaultOfficeGalleryItems.map((item, i) => ({
+    ...item,
+    id: `fallback-${i}`,
+  }))
+}
+
+export async function fetchPublishedOfficeGallery(): Promise<OfficeGalleryItem[]> {
+  if (!isSupabaseConfigured || !supabase) return fallbackOfficeGallery()
+  const { data, error } = await supabase
+    .from('office_gallery_items')
+    .select('*')
+    .eq('is_published', true)
+    .order('sort_order', { ascending: true })
+  if (error || !data?.length) return fallbackOfficeGallery()
+  return data as OfficeGalleryItem[]
+}
+
+export async function fetchAllOfficeGallery(): Promise<OfficeGalleryItem[]> {
+  if (!isSupabaseConfigured || !supabase) return fallbackOfficeGallery()
+  const { data, error } = await supabase
+    .from('office_gallery_items')
+    .select('*')
+    .order('sort_order', { ascending: true })
+  if (error || !data) return []
+  return data as OfficeGalleryItem[]
+}
+
+export async function upsertOfficeGalleryItem(
+  item: Partial<OfficeGalleryItem> & {
+    media_type: 'image' | 'video'
+    public_url: string
+  },
+): Promise<void> {
+  if (!isSupabaseConfigured || !supabase) throw new Error('Supabase not configured')
+  const payload = {
+    media_type: item.media_type,
+    public_url: item.public_url,
+    storage_path: item.storage_path ?? null,
+    caption: item.caption ?? '',
+    grid_layout: item.grid_layout ?? 'standard',
+    sort_order: item.sort_order ?? 0,
+    is_published: item.is_published ?? true,
+  }
+  if (item.id && !item.id.startsWith('fallback-')) {
+    const { error } = await supabase.from('office_gallery_items').update(payload).eq('id', item.id)
+    if (error) throw error
+  } else {
+    const { error } = await supabase.from('office_gallery_items').insert(payload)
+    if (error) throw error
+  }
+}
+
+export async function deleteOfficeGalleryItem(item: OfficeGalleryItem): Promise<void> {
+  if (!isSupabaseConfigured || !supabase) throw new Error('Supabase not configured')
+  if (item.storage_path) {
+    await supabase.storage.from('website-media').remove([item.storage_path])
+  }
+  if (!item.id.startsWith('fallback-')) {
+    const { error } = await supabase.from('office_gallery_items').delete().eq('id', item.id)
+    if (error) throw error
+  }
 }
 
 export type { MediaAsset }

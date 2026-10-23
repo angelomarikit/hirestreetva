@@ -1,5 +1,6 @@
 import {
   Briefcase,
+  Building2,
   FileText,
   HelpCircle,
   ImageIcon,
@@ -19,6 +20,7 @@ const nav = [
   { to: '/admin/settings', label: 'Website settings', icon: Settings },
   { to: '/admin/content', label: 'Page content', icon: FileText },
   { to: '/admin/media', label: 'Media library', icon: ImageIcon },
+  { to: '/admin/office', label: 'Office gallery', icon: Building2 },
   { to: '/admin/services', label: 'Services', icon: Sparkles },
   { to: '/admin/faqs', label: 'FAQ', icon: HelpCircle },
   { to: '/admin/jobs', label: 'Careers', icon: Briefcase },

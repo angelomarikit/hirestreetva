@@ -68,6 +68,21 @@ export type SiteSettings = {
   image_contact_panel: string | null
   image_careers_panel: string | null
   image_business_cta: string | null
+  office_featured_video_url: string | null
+}
+
+export type OfficeGalleryGridLayout = 'large' | 'standard' | 'wide'
+
+export type OfficeGalleryItem = {
+  id: string
+  media_type: 'image' | 'video'
+  public_url: string
+  storage_path: string | null
+  caption: string
+  grid_layout: OfficeGalleryGridLayout
+  sort_order: number
+  is_published: boolean
+  created_at?: string
 }
 
 export type ContentEntry = {

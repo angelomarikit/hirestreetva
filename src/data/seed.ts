@@ -34,6 +34,7 @@ export const defaultSettings: SiteSettings = {
   image_careers_panel: '/images/careers-strategy.jpg',
   image_business_cta:
     'https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=2400&q=80',
+  office_featured_video_url: null,
 }
 
 export const defaultServices: Service[] = [
